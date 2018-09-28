@@ -1,0 +1,8 @@
+{
+  "name": "BetterSelf",
+  "short_name": "BetterSelf",
+  "start_url": "/",
+  "background_color": "#f2f3f5",
+  "display": "standalone",
+  "theme_color": "#f60"
+}

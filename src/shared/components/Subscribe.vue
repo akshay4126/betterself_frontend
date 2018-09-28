@@ -1,0 +1,171 @@
+<template>
+    <div
+        class="subscribe"
+        :class="{'subscribe-dark': theme === 'dark', 'subscribe-light': theme === 'light'}"
+        :style="{'background-color': bcgColor, 'max-width': maxWidth}"
+    >
+
+        <input class="subscribe-input"
+               type="text"
+               ref="email"
+               :placeholder="placeholder"
+               @input="$emit('input', $event.target.value)"
+               @keyup.enter="subscribe"
+        >
+
+
+        <div class="subscribe-right">
+            <button
+                class="subscribe-button"
+                v-if="!isSend"
+                @click="subscribe"
+            >
+                Subscribe
+                <img src="/public/img/arrow-yellow.svg" alt="arrow">
+            </button>
+
+            <div v-if="isSend" class="done">
+                Done
+                <img src="/public/img/check.svg" alt="checkmark">
+            </div>
+
+        </div>
+
+    </div>
+</template>
+
+<script>
+    import dataService from '../../shared/services/data'
+
+    export default {
+        props: {
+            theme: {
+                type: String,
+                validator: value => {return value === 'dark' || value === 'light'}
+            },
+            placeholder: {
+                type: String
+            },
+            value: {
+                type: String
+            },
+            bcgColor: {
+                type: String
+            },
+            maxWidth: {
+                type: String,
+                default: '324px'
+            }
+        },
+        data() {
+            return {
+                isSend: false
+            }
+        },
+        methods:{
+            subscribe() {
+                dataService.subscribe(this.$refs.email.value).then(() => {
+                    this.isSend = true
+                    this.$refs.email.value = ''
+                })
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+@import "../../scss/var";
+@import "../../scss/mixins";
+$lightBcg: rgba(65, 25, 102, 0.37);
+
+    .subscribe{
+        padding: 15px 24px;
+        background: $white;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-input{
+            border:none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        &-button{
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 18px;
+                margin-left: 8px;
+            }
+        }
+
+        &-light{
+            @include bcg-color-with-opacity($lightBcg, 0.05);
+
+            input{
+                background: transparent;
+                color: $text_blue;
+            }
+
+            button{
+                color: $text_blue;
+            }
+
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: rgba(39, 12, 72, 0.5);
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: rgba(39, 12, 72, 0.5);
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+                color: rgba(39, 12, 72, 0.5);
+            }
+            :-moz-placeholder { /* Firefox 18- */
+                color: rgba(39, 12, 72, 0.5);
+            }
+        }
+
+        &-dark{
+            @include bcg-color-with-opacity(black, 0.2);
+
+            input{
+               background: transparent;
+               color: $white;
+            }
+
+            button{
+                color: $white;
+            }
+
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: rgba(255, 255, 255, 0.5)
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: rgba(255, 255, 255, 0.5)
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+                color: rgba(255, 255, 255, 0.5)
+            }
+            :-moz-placeholder { /* Firefox 18- */
+                color: rgba(255, 255, 255, 0.5)
+            }
+        }
+    }
+
+    .done{
+        color: $text_green;
+        font-size: 14px;
+
+        img{
+            margin-left: 8px;
+        }
+    }
+
+</style>

@@ -1,0 +1,70 @@
+//ClearFiX mixin
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin color-with-opacity($color, $opacity) {
+  color: rgba($color, $opacity);
+}
+
+@mixin bcg-color-with-opacity($color, $opacity) {
+  background-color: rgba($color, $opacity) !important;
+}
+
+@mixin border-color-with-opacity($color, $opacity) {
+  border-color: rgba($color, $opacity);
+}
+
+@mixin fill-with-opacity($color, $opacity) {
+  fill: rgba($color, $opacity);
+}
+
+//Centered Element mixin
+@mixin push-auto() {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+//Pseudo element mixin
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+
+//Setting font mixin
+@mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false){
+  @if $size { font-size: $size;  }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+}
+
+//Placeholder
+@mixin input-placeholder{
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+
+//Increase animation speed (hardware acceleration)
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
+}
+
