@@ -13,6 +13,7 @@
                 :btnType="'simple'"
                 :text="'Learn More'"
                 :width="'140px'"
+                @click="$router.push({name: 'about'})"
             />
 
         </div>
@@ -23,6 +24,11 @@
     import CustomBtn from '../../../shared/components/Custom-btn.vue'
 
     export default {
+        props: {
+            data: {
+                type: Array
+            }
+        },
         components:{
             CustomBtn
         }

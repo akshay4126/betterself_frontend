@@ -29,7 +29,13 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        props: {
+            data: {
+                type: Array
+            }
+        },
+    }
 </script>
 
 <style lang="scss" scoped>

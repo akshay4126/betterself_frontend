@@ -10,6 +10,11 @@
     import BeFirstForm from '../../../shared/components/Be-first-form.vue'
 
     export default {
+        props: {
+            data: {
+                type: Array
+            }
+        },
         components: {
             BeFirstForm
         }

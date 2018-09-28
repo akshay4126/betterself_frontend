@@ -43,6 +43,11 @@
     import Subscribe from '../../../shared/components/Subscribe.vue'
 
     export default {
+        props: {
+            data: {
+                type: Array
+            }
+        },
         components:{
             Subscribe
         }

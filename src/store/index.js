@@ -12,7 +12,7 @@ export function createStore () {
   return new Vuex.Store({
       state: {
           landing: {},
-          about: {},
+          about: [],
       },
       actions: actions,
       getters: getters,

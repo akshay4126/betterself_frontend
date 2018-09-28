@@ -1,11 +1,11 @@
 <template>
     <main class="main">
 
-        <top-section/>
-        <vision/>
-        <about/>
-        <info/>
-        <be-first/>
+        <top-section :data="landingPage"/>
+        <vision :data="landingPage"/>
+        <about :data="landingPage"/>
+        <info :data="landingPage"/>
+        <be-first :data="landingPage"/>
         <contact/>
 
     </main>
@@ -18,6 +18,7 @@
     import Info from './components/Info.vue'
     import BeFirst from './components/Be-first.vue'
     import Contact from './components/Contact.vue'
+    import {mapGetters} from 'vuex'
 
     export default {
         asyncData({store}) {
@@ -30,6 +31,11 @@
             Info,
             BeFirst,
             Contact
+        },
+        computed: {
+            ...mapGetters([
+                'landingPage'
+            ])
         }
     }
 </script>

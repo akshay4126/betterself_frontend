@@ -1,7 +1,12 @@
 const aboutPage = (state) => {
-    return state.about ? state.about[0].content : {}
+    return state.about.length ? state.about[0].content : {}
 };
 
+const landingPage = (state) => {
+    return state.landing
+}
+
 export default {
-    aboutPage
+    aboutPage,
+    landingPage
 }
