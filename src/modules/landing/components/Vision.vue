@@ -4,11 +4,11 @@
 
             <div class="vision-left">
                 <h3 class="vision-title">
-                    Vision
+                    {{visionHeader}}
                 </h3>
 
                 <p class="vision-text">
-                    We want to be the most effective community of people experiencing their personal BetterSelf and empowering the rest of the world.
+                    {{visionDesc}}
                 </p>
             </div>
 
@@ -21,12 +21,20 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
+
     export default {
         props: {
             data: {
                 type: Array
             }
         },
+        computed: {
+            ...mapGetters([
+                'visionHeader',
+                'visionDesc'
+            ])
+        }
     }
 </script>
 

@@ -2,11 +2,11 @@
     <section class="about">
         <div class="inner-wrapper">
 
-            <h3 class="about-title">About App</h3>
+            <h3 class="about-title">{{aboutHeader}}</h3>
 
-            <p class="about-subtitle">This story began when we realized the problem faced by most of today's people…</p>
+            <p class="about-subtitle">{{aboutSubHeader}}</p>
 
-            <p class="about-text">In modern world actions are building blocks of the physical world experience, or any desired dream state our users dream of. These days, due to overflow of information, attention seekers and people being addicted to phone/tech - they end up creating lot of dreams, waste lot of time on tech (due to algorithms / companies optimized to keep them addicted). </p>
+            <p class="about-text">{{aboutDesc}}</p>
 
             <custom-btn
                 class="about-btn"
@@ -22,6 +22,7 @@
 
 <script>
     import CustomBtn from '../../../shared/components/Custom-btn.vue'
+    import {mapGetters} from 'vuex'
 
     export default {
         props: {
@@ -31,6 +32,13 @@
         },
         components:{
             CustomBtn
+        },
+        computed: {
+            ...mapGetters([
+                'aboutHeader',
+                'aboutSubHeader',
+                'aboutDesc'
+            ])
         }
     }
 </script>

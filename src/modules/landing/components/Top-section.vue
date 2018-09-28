@@ -7,7 +7,7 @@
                      alt="title"
                      class="top-section-title"
                 >
-                <h1 class="top-section-subtitle">Co-experience your BetterSelf, today</h1>
+                <h1 class="top-section-subtitle">{{firstScreenSubheader}}</h1>
 
                 <div class="top-section-buttons">
                     <img
@@ -22,7 +22,7 @@
                     >
                 </div>
 
-                <p class="top-section-text">BetterSelf is a lifestyle design app, which empowers people to experience the best version of themselves through sustainable and pleasurable incremental changes personalised to their lifestyles and desires.</p>
+                <p class="top-section-text">{{firstScreenDesription}}</p>
 
                 <subscribe
                     class="top-section-subscribe"
@@ -41,6 +41,7 @@
 
 <script>
     import Subscribe from '../../../shared/components/Subscribe.vue'
+    import {mapGetters} from 'vuex'
 
     export default {
         props: {
@@ -50,6 +51,12 @@
         },
         components:{
             Subscribe
+        },
+        computed: {
+            ...mapGetters([
+                'firstScreenSubheader',
+                'firstScreenDesription'
+            ])
         }
     }
 </script>

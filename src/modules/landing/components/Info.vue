@@ -4,24 +4,24 @@
         <div class="info-block">
             <img src="/public/img/info/icon_1.svg" alt="icon">
             <div>
-                <h4 class="info-block-title">Manage your attention</h4>
-                <p class="info-block-text">Manage your attention towards thoughts, desires and actions that matter to you. </p>
+                <h4 class="info-block-title">{{feateure1Header}}</h4>
+                <p class="info-block-text">{{feateure1Desc}}</p>
             </div>
         </div>
 
         <div class="info-block">
             <img src="/public/img/info/icon_2.svg" alt="icon">
             <div>
-                <h4 class="info-block-title">Explore and exploit</h4>
-                <p class="info-block-text">Explore the path personalised to your unique self that vibes with you, and exploit it to maximise your dream experience.</p>
+                <h4 class="info-block-title">{{feateure2Header}}</h4>
+                <p class="info-block-text">{{feateure2Desc}}</p>
             </div>
         </div>
 
         <div class="info-block">
             <img src="/public/img/info/icon_3.svg" alt="icon">
             <div>
-                <h4 class="info-block-title">Co-create and Co-experience</h4>
-                <p class="info-block-text">Pleasure or pain, we are meant to experience the world as a community. Challenge yourself and inspire others towards their personal best.</p>
+                <h4 class="info-block-title">{{feateure3Header}}</h4>
+                <p class="info-block-text">{{feateure3Desc}}</p>
             </div>
         </div>
 
@@ -29,12 +29,24 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
+
     export default {
         props: {
             data: {
                 type: Array
             }
         },
+        computed: {
+            ...mapGetters([
+                'feateure1Header',
+                'feateure1Desc',
+                'feateure2Header',
+                'feateure2Desc',
+                'feateure3Header',
+                'feateure3Desc'
+            ])
+        }
     }
 </script>
 
