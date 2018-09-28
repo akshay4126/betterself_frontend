@@ -76,7 +76,7 @@
         }
 
         &-text{
-            @include font-source-sans(64px, $text_pink, 700, normal);
+            @include font-source-sans(54px, $text_pink, 700, normal);
 
             @media #{$mobile} {
                 font-size: 32px;

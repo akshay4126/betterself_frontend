@@ -1,6 +1,9 @@
 <template>
     <div>
         <modal
+            :height="490"
+            :maxWidth="'100%'"
+            :width="'650px'"
             name="form-modal"
         >
             <div class="form-content">
@@ -46,9 +49,6 @@
     /deep/ .v--modal {
         background-color: $bcg_violet;
         border-radius: 8px;
-        max-width: 650px !important;
-        width: 100% !important;
-        height: 490px !important;
         display: flex;
         align-items: center;
         justify-content: center;
