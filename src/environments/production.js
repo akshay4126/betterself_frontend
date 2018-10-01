@@ -1,7 +1,5 @@
-const apiUrl = 'https://wyldata.com/api/';
-const wyldataUrl = 'https://wyldata.com';
+const apiUrl = 'https://betterself.today/api/';
 
 export {
-  apiUrl,
-  wyldataUrl
+  apiUrl
 }
