@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404</title>
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            min-height:100%;
+            height: 100%;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        *{
+            box-sizing: border-box;
+            transition: 0.2s;
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo img {
+            width: 40px;
+        }
+
+        .inner-wrapper{
+            max-width: 1115px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn{
+            outline: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .show-on-mobile{
+            display: none;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 767px){
+            .show-on-mobile{
+                display: none;
+            }
+        }
+
+        .header {
+            height: 70px;
+            background-color: #2c0e50;
+        }
+
+        .header .inner-wrapper{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left{
+             display: flex;
+             align-items: center;
+        }
+
+        .header-nav-mobile__item{
+             color: white;
+             font-size: 18px;
+             margin-top: 40px;
+         }
+
+
+
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            .header-nav {
+                display: none;
+            }
+        }
+
+        .header-nav__item{
+            margin-left: 40px;
+            font-size: 14px;
+            color: white;
+            font-weight: 700;
+         }
+
+        .header-right{
+             display: flex;
+             align-items: center;
+        }
+
+
+        .header .socials {
+            margin-right: 24px;
+        }
+
+        .header .socials__link {
+            margin-right: 16px;
+        }
+
+        .header .socials__link:last-of-type{
+            margin-right: 0;
+        }
+
+
+        .footer {
+            background-color: #270c48;
+            height: 70px;
+            position: relative;
+            line-height: 70px;
+        }
+
+        .footer .inner-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-center img:first-of-type{
+                width: 32px;
+        }
+        .footer-center img:last-of-type{
+                width: 98px;
+                margin-left: 8px;
+        }
+
+
+        .footer .socials__link{
+             margin-right: 16px;
+        }
+
+        .footer .socials__link:last-of-type{
+            margin-right: 0;
+        }
+
+        .content{
+            text-align: center;
+            font-size: 22px;
+            color: #270c48;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="inner-wrapper">
+
+        <div class="header-left">
+            <div class="logo">
+                <img
+                    class="desktop-logo"
+                    src="/public/img/logo.png"
+                    alt="logo"
+                >
+            </div>
+
+            <div class="header-nav">
+                <a href="/about" class="header-nav__item">About</a>
+                <a href="/about#vision" class="header-nav__item">Vision</a>
+                <a href="/about#info" class="header-nav__item">Features</a>
+                <a href="/about#contact" class="header-nav__item">Contact Us</a>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+            <div class="socials">
+                <a href="#" class="socials__link">
+                    <img src="/public/img/socials/facebook.svg" alt="facebook">
+                </a>
+                <a href="#" class="socials__link">
+                    <img src="/public/img/socials/instagram.svg" alt="instagram">
+                </a>
+                <a href="#" class="socials__link">
+                    <img src="/public/img/socials/twitter.svg" alt="twitter">
+                </a>
+            </div>
+            <custom-btn
+                :text="'Subscribe'"
+                :btnType="'gradient'"
+                :width="'140px'"
+                @click="$modal.show('form-modal')"
+                :showArrow="true"
+            />
+        </div>
+
+    </div>
+</header>
+
+
+<main class="content">
+    Page Not Found <br>
+    The requested URL was not found on this server
+</main>
+
+
+<footer class="footer">
+    <div class="inner-wrapper">
+
+        <div class="empty">
+
+        </div>
+
+
+        <div class="footer-center">
+            <img src="/public/img/logo.png" alt="logo">
+            <img src="/public/img/better-self.svg" alt="better-self">
+        </div>
+
+
+        <div class="socials">
+            <a href="#" class="socials__link">
+                <img src="/public/img/socials/facebook.svg" alt="facebook">
+            </a>
+            <a href="#" class="socials__link">
+                <img src="/public/img/socials/instagram.svg" alt="instagram">
+            </a>
+            <a href="#" class="socials__link">
+                <img src="/public/img/socials/twitter.svg" alt="twitter">
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

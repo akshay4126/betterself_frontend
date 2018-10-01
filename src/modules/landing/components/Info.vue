@@ -77,7 +77,7 @@
             margin-top: 64px;
 
             img{
-                width: 80px;
+                width: 100px;
                 margin-right: 20px;
             }
 
@@ -86,7 +86,10 @@
             }
 
             &-title{
-                @include font-source-sans(40px, $text_blue, 700, normal);
+                @include font-source-sans(32px, $text_blue, 700, normal);
+                background: linear-gradient(68deg, #9018ff, #ff5353 60%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
 
                 @media #{$mobile} {
                     font-size: 24px;

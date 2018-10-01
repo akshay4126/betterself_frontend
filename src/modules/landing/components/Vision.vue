@@ -2,6 +2,8 @@
     <section class="vision" id="vision">
         <div class="inner-wrapper">
 
+            <img class="star" src="/public/img/star.svg" alt="star">
+
             <div class="vision-left">
                 <h3 class="vision-title">
                     {{visionHeader}}
@@ -51,6 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
 
             @media #{$mobile} {
                 flex-direction: column-reverse;
@@ -94,6 +97,12 @@
                 font-size: 40px;
             }
         }
+    }
+
+    .star{
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
 </style>

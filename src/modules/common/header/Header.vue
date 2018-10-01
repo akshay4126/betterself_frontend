@@ -6,7 +6,7 @@
                 <logo/>
 
                 <div class="header-nav">
-                    <router-link :to="{ name: 'about' }" class="header-nav__item">About App</router-link>
+                    <router-link :to="{ name: 'about' }" class="header-nav__item">About</router-link>
                     <router-link :to="{ name: 'home', hash: '#vision'}" class="header-nav__item">Vision</router-link>
                     <router-link :to="{ name: 'home', hash: '#info'}" class="header-nav__item">Features</router-link>
                     <router-link :to="{ name: 'home', hash: '#contact'}" class="header-nav__item">Contact Us</router-link>

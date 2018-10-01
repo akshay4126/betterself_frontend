@@ -3,7 +3,7 @@
         <div class="inner-wrapper">
 
             <div class="top-section-left">
-                <img src="/public/img/better-self.svg"
+                <img src="/public/img/better-self.png"
                      alt="title"
                      class="top-section-title"
                 >
