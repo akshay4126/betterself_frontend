@@ -11,7 +11,7 @@
 
     export default {
         asyncData({store}) {
-            return store.dispatch('getAbout')
+            return store.dispatch('initApp')
         },
         metaInfo() {
             return {

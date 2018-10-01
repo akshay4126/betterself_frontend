@@ -90,7 +90,7 @@ function render (req, res) {
     if (err.url) {
       res.redirect(err.url)
     } else if(err.code === 404 || err.status === 404) {
-      res.status(404).send('404 | Page Not Found')
+        res.status(404).sendFile(resolve('./public/pages/404.html'));
     } else {
       // Render Error Page or Redirect
       res.status(500).send('500 | Internal Server Error')
@@ -104,6 +104,7 @@ function render (req, res) {
     url: req.url
   }
   renderer.renderToString(context, (err, html) => {
+    console.log(err)
     if (err) {
       return handleError(err)
     }
