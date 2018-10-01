@@ -2,7 +2,7 @@
     <div class="be-first-form">
         <img src="/public/img/rainbow.svg" alt="rainbow">
         <h3 class="be-first-form-title">Be the first to try</h3>
-        <img src="/public/img/better-self.svg" alt="better-self">
+        <img src="/public/img/better-self.png" alt="better-self">
 
         <subscribe
             :placeholder="'Enter email address'"
