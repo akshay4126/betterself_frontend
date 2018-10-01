@@ -2,13 +2,18 @@ node {
 
   def folder = 'betterself_frontend'
   def branches = [
+    'develop': [
+       'host': 'develop.betterself.today',
+       'url': 'https://develop.betterself.today/',
+       'pem': '/var/lib/jenkins/betterself-dev.pem',
+       'command': 'npm run build:dev'
+    ],
     'master': [
        'host': 'betterself.today',
        'url': 'https://betterself.today/',
-       'pem': '/var/lib/jenkins/betterself-dev.pem',
+       'pem': '/var/lib/jenkins/betterself-prod.pem',
        'command': 'npm run build:prod'
     ],
-
   ]
 
   echo "${env.BRANCH_NAME}, ${env}"
