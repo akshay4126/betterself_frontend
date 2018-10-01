@@ -24,6 +24,18 @@
         asyncData({store}) {
           return store.dispatch('getLanding')
         },
+        metaInfo() {
+            return {
+                title: this.mainPageTitle,
+                meta: [
+                    { name:"description", content: this.mainPageDesc},
+                    { property: "og:title", content: this.mainPageTitle },
+                    { name: "twitter:title", content: this.mainPageTitle },
+                    { property: "og:description", content: this.mainPageDesc },
+                    { name: "twitter:description", content: this.mainPageDesc },
+                ]
+            }
+        },
         components: {
             TopSection,
             Vision,
@@ -34,7 +46,10 @@
         },
         computed: {
             ...mapGetters([
-                'landingPage'
+                'landingPage',
+                'mainPageTitle',
+                'mainPageDesc'
+
             ])
         }
     }

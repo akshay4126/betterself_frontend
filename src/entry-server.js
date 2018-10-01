@@ -11,6 +11,7 @@ export default context => {
   return new Promise((resolve, reject) => {
     const s = isDev && Date.now()
     const { app, router, store } = createApp()
+    const meta = app.$meta()
 
     const { url } = context
     const { fullPath } = router.resolve(url).route
@@ -46,6 +47,7 @@ export default context => {
         // store to pick-up the server-side state without having to duplicate
         // the initial data fetching on the client.
         context.state = store.state
+        context.meta = meta
         resolve(app)
       }).catch(reject)
     }, reject)
