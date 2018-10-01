@@ -13,9 +13,23 @@
         asyncData({store}) {
             return store.dispatch('getAbout')
         },
+        metaInfo() {
+            return {
+                title: this.aboutPageTitle,
+                meta: [
+                    { name:"description", content: this.aboutPageDesc},
+                    { property: "og:title", content: this.aboutPageTitle },
+                    { name: "twitter:title", content: this.aboutPageTitle },
+                    { property: "og:description", content: this.aboutPageDesc },
+                    { name: "twitter:description", content: this.aboutPageDesc },
+                ]
+            }
+        },
         computed: {
             ...mapGetters([
-                'aboutPage'
+                'aboutPage',
+                'aboutPageTitle',
+                'aboutPageDesc'
             ])
         }
     }

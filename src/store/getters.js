@@ -59,6 +59,21 @@ const feateure3Desc = (state) => {
     return state.landing.find(item => item.key === 'feature3-description').text
 };
 
+const mainPageTitle = (state) => {
+    return state.landing.find(item => item.key === 'seo-main-title').text
+}
+
+const mainPageDesc = (state) => {
+    return state.landing.find(item => item.key === 'seo-main-description').text
+}
+
+const aboutPageTitle = (state) => {
+    return state.landing.find(item => item.key === 'seo-about-title').text
+}
+
+const aboutPageDesc = (state) => {
+    return state.landing.find(item => item.key === 'seo-about-description').text
+}
 
 
 
@@ -77,5 +92,9 @@ export default {
     feateure2Header,
     feateure2Desc,
     feateure3Header,
-    feateure3Desc
+    feateure3Desc,
+    mainPageTitle,
+    mainPageDesc,
+    aboutPageTitle,
+    aboutPageDesc
 }

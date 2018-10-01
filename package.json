@@ -36,6 +36,7 @@
     "vue-anchor-router-link": "^0.7.3",
     "vue-chat-scroll": "^1.3.3",
     "vue-js-modal": "^1.3.26",
+    "vue-meta": "^1.5.5",
     "vue-no-ssr": "^0.2.2",
     "vue-plain-slider": "^1.0.2",
     "vue-router": "^3.0.1",
