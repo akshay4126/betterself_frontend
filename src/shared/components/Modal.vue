@@ -2,7 +2,6 @@
     <div>
         <modal
             :height="490"
-            :maxWidth="'100%'"
             :width="'650px'"
             name="form-modal"
         >
