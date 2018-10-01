@@ -117,7 +117,7 @@
         font-weight: 700;
         font-size: 12px;
         text-align: left;
-        font-family: 'AvenirBold';
+        font-family: 'Source Sans Pro', sans-serif;
         margin-bottom: 4px;
     }
 
@@ -126,28 +126,32 @@
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: #000000;
+        color: $text_blue;
         opacity: 0.5;
+        font-weight: 600;
         font-size: 14px;
-        font-family: 'AvenirThin', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
     ::-moz-placeholder { /* Firefox 19+ */
-        color: #000000;
+        color: $text_blue;
         opacity: 0.5;
+        font-weight: 600;
         font-size: 14px;
-        font-family: 'AvenirThin', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
     :-ms-input-placeholder { /* IE 10+ */
-        color: #000000;
+        color: $text_blue;
         opacity: 0.5;
+        font-weight: 600;
         font-size: 14px;
-        font-family: 'AvenirThin', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
     :-moz-placeholder { /* Firefox 18- */
-        color: #000000;
+        color: $text_blue;
         opacity: 0.5;
+        font-weight: 600;
         font-size: 14px;
-        font-family: 'AvenirThin', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 
 

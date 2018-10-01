@@ -48,7 +48,8 @@
     .btn{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        padding: 0 24px;
         @include font-source-sans(14px, $white, 700);
 
 

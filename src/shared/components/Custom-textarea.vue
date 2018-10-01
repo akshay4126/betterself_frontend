@@ -77,7 +77,7 @@
     text-align: left;
     display: block;
     margin-bottom: 4px;
-    font-family: 'AvenirBold';
+    font-family: 'Source Sans Pro', sans-serif;
 
   }
   .textarea-length{
