@@ -12,7 +12,7 @@
                 <div class="top-section-buttons">
                     <img
                         @click="$modal.show('form-modal')"
-                        src="/public/img/top-section/apple@2x.jpg"
+                        src="/public/img/Apple.svg"
                         alt="apple-store"
                     >
                     <img
@@ -143,15 +143,14 @@
 
             @media #{$mobile} {
                 order:3;
-                margin-top: 20px;
                 text-align: center;
             }
         }
 
         &-subscribe{
             @media #{$mobile} {
-                order:2;
-                margin: 0 auto;
+                order:3;
+                margin: 15px auto 0;
             }
         }
 

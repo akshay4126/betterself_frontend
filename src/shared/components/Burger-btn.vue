@@ -1,6 +1,6 @@
 <template>
     <div class="burger" @click="$root.$emit('openMobileMenu')">
-        <img src="/public/img/burger-btn.svg" alt="burger">
+        <img src="/public/img/burger-btn.png" alt="burger">
     </div>
 </template>
 
