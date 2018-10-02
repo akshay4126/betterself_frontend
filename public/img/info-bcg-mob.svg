@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="740" viewBox="0 0 320 740">
+    <defs>
+        <linearGradient id="a" x1="-8.231%" x2="202.17%" y1="166.498%" y2="-620.233%">
+            <stop offset="0%" stop-color="#8400FF"/>
+            <stop offset="29.231%" stop-color="#FF5353"/>
+            <stop offset="65.005%" stop-color="#F3FFA3"/>
+            <stop offset="100%" stop-color="#FFF"/>
+        </linearGradient>
+        <linearGradient id="d" x1="24.415%" x2="202.17%" y1="130.679%" y2="-620.233%">
+            <stop offset="0%" stop-color="#9018FF"/>
+            <stop offset="29.231%" stop-color="#FF5353"/>
+            <stop offset="65.005%" stop-color="#F3FFA3"/>
+            <stop offset="100%" stop-color="#FFF"/>
+        </linearGradient>
+        <path id="c" d="M36.974 7.822c-13.355 0-24.218 10.498-24.218 23.403v34.579c0 3.32 2.684 6.019 5.984 6.019 3.298 0 5.983-2.7 5.983-6.02V63.13c0-1.74 1.406-3.154 3.133-3.154 1.728 0 3.134 1.414 3.134 3.154v2.674c0 3.32 2.684 6.019 5.984 6.019s5.985-2.7 5.985-6.02V63.13c0-1.74 1.406-3.154 3.134-3.154 1.727 0 3.133 1.414 3.133 3.154v2.674c0 3.32 2.684 6.019 5.983 6.019 3.299 0 5.983-2.7 5.983-6.02V31.226c0-12.905-10.863-23.403-24.218-23.403zM26.527 36.479c-3.148 0-5.699-2.566-5.699-5.731s2.551-5.732 5.699-5.732c3.147 0 5.699 2.567 5.699 5.732s-2.552 5.73-5.699 5.73zm10.447 20.06c-3.927 0-7.123-3.215-7.123-7.165 0-3.949 3.196-7.164 7.123-7.164 3.926 0 7.123 3.214 7.123 7.164 0 3.95-3.197 7.165-7.123 7.165zm10.447-20.06c-3.148 0-5.7-2.566-5.7-5.731s2.552-5.732 5.7-5.732c3.147 0 5.698 2.567 5.698 5.732s-2.551 5.73-5.698 5.73z"/>
+        <filter id="b" width="201.2%" height="176.6%" x="-50.6%" y="-36.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.784313725 0 0 0 0 0.211764706 0 0 0 0 0.662745098 0 0 0 0.538666214 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="nonzero">
+        <path fill="url(#a)" d="M318 734a3.201 3.201 0 0 1-3.2-3.2c0-5.293-4.307-9.6-9.6-9.6a3.201 3.201 0 0 1 0-6.4c5.293 0 9.6-4.307 9.6-9.6a3.201 3.201 0 0 1 6.4 0c0 5.293 4.307 9.6 9.6 9.6a3.201 3.201 0 0 1 0 6.4c-5.293 0-9.6 4.307-9.6 9.6 0 1.766-1.434 3.2-3.2 3.2" transform="translate(-7 6)"/>
+        <g transform="rotate(30 22.278 29.76)">
+            <use fill="#000" filter="url(#b)" xlink:href="#c"/>
+            <use fill="url(#d)" fill-rule="evenodd" xlink:href="#c"/>
+        </g>
+    </g>
+</svg>

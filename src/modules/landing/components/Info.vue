@@ -67,6 +67,8 @@
 
         @media #{$mobile} {
             padding: 100px 20px;
+            background-image: url("/public/img/info-bcg-mob.svg"), $bcg_gradient;
+
         }
 
         &-block{
