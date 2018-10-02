@@ -72,7 +72,7 @@
         &-block{
             display: flex;
             align-items: flex-start;
-            max-width: 510px;
+            max-width: 550px;
             width: 100%;
             margin-top: 64px;
 
