@@ -166,7 +166,7 @@
         }
 
         &-text{
-            @include font-source-sans(18px, $text_blue, 400, 1.83);
+            @include font-source-sans(18px, $text_blue, 600, 1.83);
             margin: 24px 0;
 
             @media #{$mobile} {
