@@ -1,6 +1,8 @@
 <template>
     <section class="info" id="info">
 
+        <img class="ghost" src="/public/img/ghost.svg" alt="ghost">
+
         <div class="info-block">
             <img src="/public/img/info/icon_1.svg" alt="icon">
             <div>
@@ -63,10 +65,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+
+        .ghost{
+            position: absolute;
+            top: -40px;
+            left: 0;
+            display: none;
+
+            @media #{$mobile} {
+                display: block;
+            }
+        }
 
 
         @media #{$mobile} {
             padding: 100px 20px;
+            background-image: $bcg_gradient;
         }
 
         &-block{

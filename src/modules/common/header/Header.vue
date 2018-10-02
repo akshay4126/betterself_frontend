@@ -15,7 +15,7 @@
                 <div class="header-nav-mobile" v-if="showMobileMenu">
                     <img src="/public/img/logo.png" alt="logo">
 
-                    <div class="links">
+                    <div class="links" @click="closeMobileMenu">
                         <router-link to="/" class="header-nav-mobile__item">BetterSelf</router-link>
                         <router-link :to="{ name: 'about' }" class="header-nav-mobile__item">About</router-link>
                         <router-link :to="{ name: 'home', hash: '#vision' }" class="header-nav-mobile__item">Vision</router-link>
@@ -76,11 +76,6 @@
           return {
               showMobileMenu: false
           }
-        },
-        watch: {
-            '$route'(to) {
-                this.closeMobileMenu();
-            }
         },
         mounted() {
             this.$root.$on('openMobileMenu', () => {
@@ -150,7 +145,7 @@
                 }
 
                 img{
-                    width: 40px;
+                    width: 70px;
                 }
 
                 &__item{
@@ -158,6 +153,11 @@
                     font-size: 18px;
                     margin-top: 40px;
                     transition: .2s;
+                    font-weight: 700;
+
+                    &:first-of-type{
+                        margin-top: -30px;
+                    }
                 }
             }
 

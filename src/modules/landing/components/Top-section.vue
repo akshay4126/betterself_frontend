@@ -17,7 +17,7 @@
                     >
                     <img
                         @click="$modal.show('form-modal')"
-                        src="/public/img/top-section/google@2x.jpg"
+                        src="/public/img/Google.svg"
                         alt="google-play"
                     >
                 </div>
@@ -127,6 +127,8 @@
 
             @media #{$mobile} {
                 order:1;
+                max-width: 200px;
+                margin: 0 auto;
             }
         }
 
