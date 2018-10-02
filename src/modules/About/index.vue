@@ -56,6 +56,12 @@
             margin: 0 auto;
             margin-bottom: 350px;
         }
+
+        .be-first{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
     }
 
     .inner-wrapper{
@@ -67,11 +73,7 @@
         }
     }
 
-    .be-first{
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-    }
+
 
     /deep/ {
         .about-content{
