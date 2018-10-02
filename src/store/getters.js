@@ -75,6 +75,9 @@ const aboutPageDesc = (state) => {
     return state.landing.find(item => item.key === 'seo-about-description').text
 }
 
+const aboutH1 = (state) => {
+    return state.landing.find(item => item.key === 'seo-about-h1').text
+}
 
 
 export default {
@@ -96,5 +99,6 @@ export default {
     mainPageTitle,
     mainPageDesc,
     aboutPageTitle,
-    aboutPageDesc
+    aboutPageDesc,
+    aboutH1
 }

@@ -1,6 +1,7 @@
 <template>
     <div class="about">
         <div class="inner-wrapper">
+            <h1>{{aboutH1}}</h1>
             <div class="about-content" v-html="aboutPage"></div>
         </div>
         <be-first class="be-first"/>
@@ -34,7 +35,8 @@
             ...mapGetters([
                 'aboutPage',
                 'aboutPageTitle',
-                'aboutPageDesc'
+                'aboutPageDesc',
+                'aboutH1'
             ])
         }
     }
@@ -59,6 +61,11 @@
 
     .inner-wrapper{
         margin-bottom: 430px;
+
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+        }
     }
 
     .be-first{
@@ -72,6 +79,23 @@
             @include font-source-sans(40px, $text_blue, 700, normal);
         }
 
+        h2{
+            @include font-source-sans(24px, $text_blue, 700, normal);
+        }
+
+        h3{
+            @include font-source-sans(22px, $text_blue, 700, normal);
+        }
+
+        h4{
+            @include font-source-sans(20px, $text_blue, 700, normal);
+        }
+
+        h5, h6{
+            @include font-source-sans(18px, $text_blue, 700, normal);
+        }
+
+
         b, strong{
             font-weight: 700;
         }
@@ -80,10 +104,21 @@
             @include font-source-sans(18px, $text_blue, 400, 24px);
         }
 
+
         ul{
             @include font-source-sans(18px, $text_blue, 400, 24px);
         }
 
+        pre{
+            white-space: pre-line;
+            line-height: normal;
+            font-size: 18px;
+        }
+
+        a{
+            color: $text_violet;
+            font-weight: 700;
+        }
 
         img{
             width: 100%;
