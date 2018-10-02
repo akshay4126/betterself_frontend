@@ -52,7 +52,7 @@
         padding: 80px 0;
         background-color: $bcg_violet;
         background-image: url('/public/img/about-bcg.svg');
-        background-size: contain;
+        background-size: 100%;
         background-repeat: no-repeat;
 
         .inner-wrapper{

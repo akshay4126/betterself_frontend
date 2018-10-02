@@ -14,11 +14,11 @@
         props: {
             height: {
                 type: String,
-                default: '45px'
+                default: 'auto'
             },
             width: {
                 type: String,
-                default: '45px'
+                default: '70px'
             }
         }
     }
@@ -29,6 +29,7 @@
 
     .logo{
         cursor: pointer;
+        margin-right: -20px;
     }
 
 </style>

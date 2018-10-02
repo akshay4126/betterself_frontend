@@ -47,6 +47,7 @@
     .about{
         min-height: calc(100vh - 140px);
         padding: 40px 0;
+        position: relative;
 
         &-content{
 
@@ -63,7 +64,7 @@
     .be-first{
         width: 100%;
         position: absolute;
-        bottom: $footer-height;
+        bottom: 0;
     }
 
     /deep/ {

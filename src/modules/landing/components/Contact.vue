@@ -102,7 +102,7 @@
     .contact{
         background-image: url("/public/img/contact-us-bcg.svg"), $bcg_gradient;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 100%;
         min-height: 505px;
         padding-top: 37px;
         padding-bottom: 88px;

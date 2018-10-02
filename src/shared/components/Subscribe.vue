@@ -99,6 +99,7 @@ $lightBcg: rgba(65, 25, 102, 0.37);
             font-weight: 700;
             display: flex;
             align-items: center;
+            outline: none;
 
             img{
                 width: 18px;
@@ -120,15 +121,27 @@ $lightBcg: rgba(65, 25, 102, 0.37);
 
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 color: rgba(39, 12, 72, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             ::-moz-placeholder { /* Firefox 19+ */
                 color: rgba(39, 12, 72, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             :-ms-input-placeholder { /* IE 10+ */
                 color: rgba(39, 12, 72, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             :-moz-placeholder { /* Firefox 18- */
                 color: rgba(39, 12, 72, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
         }
 
@@ -145,16 +158,28 @@ $lightBcg: rgba(65, 25, 102, 0.37);
             }
 
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: rgba(255, 255, 255, 0.5)
+                color: rgba(255, 255, 255, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             ::-moz-placeholder { /* Firefox 19+ */
-                color: rgba(255, 255, 255, 0.5)
+                color: rgba(255, 255, 255, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             :-ms-input-placeholder { /* IE 10+ */
-                color: rgba(255, 255, 255, 0.5)
+                color: rgba(255, 255, 255, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
             :-moz-placeholder { /* Firefox 18- */
-                color: rgba(255, 255, 255, 0.5)
+                color: rgba(255, 255, 255, 0.5);
+                font-weight: 600;
+                font-size: 14px;
+                font-family: 'Source Sans Pro', sans-serif;
             }
         }
     }

@@ -56,7 +56,7 @@
 
     .info{
         background-image: url("/public/img/info-bcg.svg"), $bcg_gradient;
-        background-size: contain;
+        background-size: 100%;
         background-repeat: no-repeat;
         min-height: 635px;
         padding: 100px 0;

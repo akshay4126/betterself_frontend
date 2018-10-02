@@ -1,8 +1,7 @@
 <template>
     <section class="vision" id="vision">
+        <img class="star" src="/public/img/star.svg" alt="star">
         <div class="inner-wrapper">
-
-            <img class="star" src="/public/img/star.svg" alt="star">
 
             <div class="vision-left">
                 <h3 class="vision-title">
@@ -48,6 +47,7 @@
         min-height: 777px;
         padding: 64px 0 112px 0;
         background: $bcg_gradient;
+        position: relative;
 
         .inner-wrapper{
             display: flex;
@@ -101,7 +101,7 @@
 
     .star{
         position: absolute;
-        top: 0;
+        top: 50px;
         right: 0;
     }
 
