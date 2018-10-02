@@ -12,9 +12,13 @@
     .burger{
         position: fixed;
         bottom: 40px;
-        right: 30px;
+        right: 0;
         z-index: 9;
-        width: 40px;
+        width: 70px;
+
+        img{
+            width: 100%;
+        }
     }
 
 </style>

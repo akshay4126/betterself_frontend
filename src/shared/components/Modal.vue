@@ -51,6 +51,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media #{$mobile} {
+            max-width: 100%;
+        }
     }
 
     .close{

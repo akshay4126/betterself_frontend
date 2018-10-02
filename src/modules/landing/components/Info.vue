@@ -76,6 +76,13 @@
             width: 100%;
             margin-top: 64px;
 
+            @media #{$mobile} {
+               flex-direction: column;
+               justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
             img{
                 width: 100px;
                 margin-right: 20px;

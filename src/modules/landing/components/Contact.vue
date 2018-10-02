@@ -110,6 +110,10 @@
         flex-direction: column;
         align-items: center;
 
+        @media #{$mobile} {
+            background: $bcg_gradient;
+        }
+
 
         &-title{
             @include font-source-sans(40px, $text_blue, 700, 0.83);
