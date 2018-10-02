@@ -51,11 +51,10 @@
         padding: 40px 0;
         position: relative;
 
-        &-content{
-
-            max-width: 660px;
+        .inner-wrapper{
+            max-width: 690px;
             margin: 0 auto;
-
+            margin-bottom: 350px;
         }
     }
 
