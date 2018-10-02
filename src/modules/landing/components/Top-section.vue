@@ -28,6 +28,7 @@
                     class="top-section-subscribe"
                     :placeholder="'Enter email address'"
                     :theme="'light'"
+                    :center="false"
                 />
             </div>
 

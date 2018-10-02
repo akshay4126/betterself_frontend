@@ -1,7 +1,7 @@
 <template>
     <div
         class="subscribe"
-        :class="{'subscribe-dark': theme === 'dark', 'subscribe-light': theme === 'light'}"
+        :class="{'subscribe-dark': theme === 'dark', 'subscribe-light': theme === 'light', 'subscribe-center': center}"
         :style="{'background-color': bcgColor, 'max-width': maxWidth}"
     >
 
@@ -55,6 +55,10 @@
             maxWidth: {
                 type: String,
                 default: '324px'
+            },
+            center: {
+                type: Boolean,
+                default: true
             }
         },
         data() {
@@ -85,7 +89,11 @@ $lightBcg: rgba(65, 25, 102, 0.37);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0 auto;
+        width: 100%;
+
+        &-center{
+            margin: 0 auto;
+        }
 
         &-input{
             border:none;
