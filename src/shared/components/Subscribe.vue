@@ -1,13 +1,18 @@
 <template>
     <div
         class="subscribe"
-        :class="{'subscribe-dark': theme === 'dark', 'subscribe-light': theme === 'light', 'subscribe-center': center}"
+        :class="{'subscribe-dark': theme === 'dark',
+                 'subscribe-light': theme === 'light',
+                 'subscribe-center': center,
+                 'subscribe-error': this.$v.email.$dirty && this.$v.email.$invalid
+                }"
         :style="{'background-color': bcgColor, 'max-width': maxWidth}"
     >
 
         <input class="subscribe-input"
                type="text"
                ref="email"
+               v-model="email"
                :placeholder="placeholder"
                @input="$emit('input', $event.target.value)"
                @keyup.enter="subscribe"
@@ -36,6 +41,7 @@
 
 <script>
     import dataService from '../../shared/services/data'
+    import { required, email } from 'vuelidate/lib/validators'
 
     export default {
         props: {
@@ -63,16 +69,25 @@
         },
         data() {
             return {
-                isSend: false
+                isSend: false,
+                email: ''
             }
         },
         methods:{
             subscribe() {
-                dataService.subscribe(this.$refs.email.value).then(() => {
-                    this.isSend = true
-                    this.$refs.email.value = ''
-                })
+                this.$v.email.$touch();
+
+                if (!this.$v.email.$invalid){
+                    dataService.subscribe(this.email).then(() => {
+                        this.isSend = true;
+                        this.email = '';
+                        this.$v.email.$reset();
+                    })
+                }
             }
+        },
+        validations: {
+            email: {required, email}
         }
     }
 </script>
@@ -81,6 +96,7 @@
 @import "../../scss/var";
 @import "../../scss/mixins";
 $lightBcg: rgba(65, 25, 102, 0.37);
+$errorColor: #c835a9;
 
     .subscribe{
         padding: 15px 24px;
@@ -99,6 +115,10 @@ $lightBcg: rgba(65, 25, 102, 0.37);
             border:none;
             outline: none;
             font-size: 14px;
+        }
+
+        &-error{
+            border:2px solid $errorColor;
         }
 
         &-button{
