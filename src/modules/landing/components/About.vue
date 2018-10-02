@@ -1,5 +1,7 @@
 <template>
     <section class="about">
+        <img class="cloud" src="/public/img/cloud_2.svg" alt="cloud">
+
         <div class="inner-wrapper">
 
             <h3 class="about-title">{{aboutHeader}}</h3>
@@ -54,6 +56,23 @@
         background-image: url('/public/img/about-bcg.svg');
         background-size: 100%;
         background-repeat: no-repeat;
+        position: relative;
+
+        .cloud{
+            position: absolute;
+            left: 0;
+            top: 20px;
+            display: none;
+
+            @media #{$mobile} {
+                display: block;
+            }
+        }
+
+        @media #{$mobile} {
+            background-image: none;
+            background-size: contain;
+        }
 
         .inner-wrapper{
             max-width: 970px;
@@ -87,6 +106,8 @@
         &-btn{
             margin-left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
         }
 
     }
