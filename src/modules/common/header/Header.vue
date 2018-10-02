@@ -157,6 +157,7 @@
                     color: $white;
                     font-size: 18px;
                     margin-top: 40px;
+                    transition: .2s;
                 }
             }
 
@@ -167,6 +168,10 @@
             &__item{
                 margin-left: 40px;
                 @include font-source-sans(14px, $white, 700)
+
+                &:hover{
+                    color: $text_yellow;
+                }
             }
         }
 

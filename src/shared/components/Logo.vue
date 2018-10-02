@@ -27,5 +27,9 @@
 <style lang="scss" scoped>
     @import "../../scss/var";
 
+    .logo{
+        cursor: pointer;
+    }
+
 </style>
 

@@ -3,15 +3,20 @@
         <div class="inner-wrapper">
             <div class="about-content" v-html="aboutPage"></div>
         </div>
+        <be-first class="be-first"/>
     </div>
 </template>
 
 <script>
     import {mapGetters} from 'vuex'
+    import BeFirst from './../landing/components/Be-first.vue'
 
     export default {
         asyncData({store}) {
             return store.dispatch('initApp')
+        },
+        components: {
+            BeFirst
         },
         metaInfo() {
             return {
@@ -49,6 +54,16 @@
             margin: 0 auto;
 
         }
+    }
+
+    .inner-wrapper{
+        margin-bottom: 430px;
+    }
+
+    .be-first{
+        width: 100%;
+        position: absolute;
+        bottom: $footer-height;
     }
 
     /deep/ {
