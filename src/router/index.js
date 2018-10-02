@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Landing from '../modules/landing/index.vue'
-import About from '../modules/About/index.vue'
+
+const Landing = () => import('../modules/landing/index.vue');
+const About = () => import('../modules/About/index.vue');
 
 Vue.use(Router);
 
