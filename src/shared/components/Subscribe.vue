@@ -85,6 +85,7 @@ $lightBcg: rgba(65, 25, 102, 0.37);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin: 0 auto;
 
         &-input{
             border:none;
