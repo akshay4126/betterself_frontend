@@ -134,7 +134,7 @@
             img{
                 cursor: pointer;
                 width: 145px;
-                height: 50px;
+                height: 43px;
 
                 &:first-of-type{
                     margin-right: 16px;
