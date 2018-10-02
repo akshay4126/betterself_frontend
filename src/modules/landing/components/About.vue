@@ -9,7 +9,6 @@
             <p class="about-subtitle">{{aboutSubHeader}}</p>
 
             <p class="about-text">{{aboutDesc}}</p>
-
             <custom-btn
                 class="about-btn"
                 :btnType="'simple'"

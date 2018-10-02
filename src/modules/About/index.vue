@@ -74,54 +74,56 @@
     }
 
     /deep/ {
-        h1{
-            @include font-source-sans(40px, $text_blue, 700, normal);
-        }
+        .about-content{
+            h1{
+                @include font-source-sans(40px, $text_blue, 700, normal);
+            }
 
-        h2{
-            @include font-source-sans(24px, $text_blue, 700, normal);
-        }
+            h2{
+                @include font-source-sans(24px, $text_blue, 700, normal);
+            }
 
-        h3{
-            @include font-source-sans(22px, $text_blue, 700, normal);
-        }
+            h3{
+                @include font-source-sans(22px, $text_blue, 700, normal);
+            }
 
-        h4{
-            @include font-source-sans(20px, $text_blue, 700, normal);
-        }
+            h4{
+                @include font-source-sans(20px, $text_blue, 700, normal);
+            }
 
-        h5, h6{
-            @include font-source-sans(18px, $text_blue, 700, normal);
-        }
-
-
-        b, strong{
-            font-weight: 700;
-        }
-
-        p{
-            @include font-source-sans(18px, $text_blue, 400, 24px);
-        }
+            h5, h6{
+                @include font-source-sans(18px, $text_blue, 700, normal);
+            }
 
 
-        ul{
-            @include font-source-sans(18px, $text_blue, 400, 24px);
-        }
+            b, strong{
+                font-weight: 700;
+            }
 
-        pre{
-            white-space: pre-line;
-            line-height: normal;
-            font-size: 18px;
-        }
+            p{
+                @include font-source-sans(18px, $text_blue, 400, 24px);
+            }
 
-        a{
-            color: $text_violet;
-            font-weight: 700;
-        }
 
-        img{
-            width: 100%;
-            height: auto;
+            ul{
+                @include font-source-sans(18px, $text_blue, 400, 24px);
+            }
+
+            pre{
+                white-space: pre-line;
+                line-height: normal;
+                font-size: 18px;
+            }
+
+            a{
+                color: $text_violet;
+                font-weight: 700;
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
 
