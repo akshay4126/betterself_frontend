@@ -54,6 +54,7 @@
 
         @media #{$mobile} {
             max-width: 100%;
+            overflow: auto !important;
         }
     }
 
