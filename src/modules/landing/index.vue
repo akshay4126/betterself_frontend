@@ -1,5 +1,5 @@
 <template>
-    <main class="main">
+    <div>
 
         <top-section :data="landingPage"/>
         <vision :data="landingPage"/>
@@ -8,7 +8,7 @@
         <be-first :data="landingPage"/>
         <contact/>
 
-    </main>
+    </div>
 </template>
 
 <script>

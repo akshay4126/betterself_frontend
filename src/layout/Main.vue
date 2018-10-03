@@ -4,7 +4,7 @@
 
         <app-header/>
 
-        <main>
+        <main class="main">
             <router-view></router-view>
         </main>
 
@@ -36,6 +36,10 @@
         justify-content: space-between;
         height: 100%;
 
+    }
+
+    .main{
+        margin-top: 70px;
     }
 
 

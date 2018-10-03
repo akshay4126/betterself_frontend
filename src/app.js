@@ -13,6 +13,12 @@ Vue.use(Vuelidate);
 import Meta from 'vue-meta'
 Vue.use(Meta)
 
+if (process.browser) {
+    const vueSmoothScroll = require('vue2-smooth-scroll')
+    Vue.use(vueSmoothScroll)
+}
+
+
 
 // Expose a factory function that creates a fresh set of store, router,
 // app instances on each call (which is called for each SSR request)

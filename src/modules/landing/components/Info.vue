@@ -1,5 +1,5 @@
 <template>
-    <section class="info" id="info">
+    <section class="info" id="info" v-smooth-scroll>
 
         <img class="ghost" src="/public/img/ghost.svg" alt="ghost">
 

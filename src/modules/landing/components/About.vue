@@ -1,5 +1,5 @@
 <template>
-    <section class="about">
+    <section class="about" id="about">
         <img class="cloud" src="/public/img/cloud_2.svg" alt="cloud">
 
         <div class="inner-wrapper">

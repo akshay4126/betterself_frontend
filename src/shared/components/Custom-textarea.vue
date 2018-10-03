@@ -1,9 +1,5 @@
 <template>
   <div class="textarea-wrapper">
-    <div class="textarea-title">
-      <span class="textarea-label">{{label}}</span>
-      <span class="textarea-length" v-if="maxLength">Max {{maxLength}} symbols</span>
-    </div>
     <textarea class="textarea-input"
               :maxlength="maxLength"
               :placeholder="placeholder"
@@ -87,7 +83,7 @@
   .textarea-input{
     width: 100%;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 14px;
     @include bcg-color-with-opacity($text_blue, 0.05);
     border: none;
 

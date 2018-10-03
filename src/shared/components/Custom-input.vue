@@ -1,13 +1,12 @@
 <template>
     <div class="input-wrapper">
         <span
-                class="input-label"
-                v-if="label"
+            class="input-label"
+            v-if="label"
         >
             {{label}}
         </span>
         <div class="input">
-            <slot name="input_before"></slot>
             <input
                 class="input-field"
                 :type="type"
@@ -21,7 +20,6 @@
                 @blur="onBlur"
                 :maxLength="maxLength"
             >
-            <slot name="input_after"></slot>
         </div>
     </div>
 </template>
@@ -99,7 +97,7 @@
     }
 
     .input-field{
-        font-size: 16px;
+        font-size: 14px;
         outline: none;
         border-radius: 24px;
         width: 100%;

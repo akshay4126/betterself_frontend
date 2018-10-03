@@ -7,30 +7,26 @@
             </div>
 
 
-            <div class="footer-center">
+            <div class="footer-center" @click="$router.push('/')">
                 <img src="/public/img/logo.png" alt="logo">
                 <img src="/public/img/better-self.svg" alt="better-self">
             </div>
 
 
-            <div class="socials">
-                <a href="https://www.facebook.com/betterself.today/" target="_blank" class="socials__link">
-                    <img src="/public/img/socials/facebook.svg" alt="facebook">
-                </a>
-                <a href="https://www.instagram.com/betterself.today/" target="_blank" class="socials__link">
-                    <img src="/public/img/socials/instagram.svg" alt="instagram">
-                </a>
-                <a href="https://twitter.com/I83423721" target="_blank" class="socials__link">
-                    <img src="/public/img/socials/twitter.svg" alt="twitter">
-                </a>
-            </div>
+            <social-links/>
 
         </div>
     </footer>
 </template>
 
 <script>
-    export default {}
+    import SocialLinks from '../../../shared/components/Social-links.vue'
+
+    export default {
+        components: {
+            SocialLinks
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -50,6 +46,7 @@
         }
 
         &-center{
+            cursor: pointer;
             display: flex;
             align-items: center;
 

@@ -6,50 +6,32 @@
                 <logo/>
 
                 <div class="header-nav">
-                    <router-link :to="{ name: 'about' }" class="header-nav__item">About</router-link>
+                    <router-link :to="{ name: 'home', hash: '#about' }"  class="header-nav__item">About</router-link>
                     <router-link :to="{ name: 'home', hash: '#vision'}" class="header-nav__item">Vision</router-link>
                     <router-link :to="{ name: 'home', hash: '#info'}" class="header-nav__item">Features</router-link>
                     <router-link :to="{ name: 'home', hash: '#contact'}" class="header-nav__item">Contact Us</router-link>
                 </div>
 
                 <div class="header-nav-mobile" v-if="showMobileMenu">
-                    <img src="/public/img/logo.png" alt="logo">
+
+                    <div class="close" @click="closeMobileMenu">x</div>
+
+                    <router-link to="/" class="logo-link"><img @click="closeMobileMenu" src="/public/img/logo.png" alt="logo"></router-link>
 
                     <div class="links" @click="closeMobileMenu">
-                        <router-link to="/" class="header-nav-mobile__item">BetterSelf</router-link>
-                        <router-link :to="{ name: 'about' }" class="header-nav-mobile__item">About</router-link>
+                        <router-link :to="{ name: 'home', hash: '#about' }" class="header-nav-mobile__item">About</router-link>
                         <router-link :to="{ name: 'home', hash: '#vision' }" class="header-nav-mobile__item">Vision</router-link>
                         <router-link :to="{ name: 'home', hash: '#info' }" class="header-nav-mobile__item">Features</router-link>
                         <router-link :to="{ name: 'home', hash: '#contact' }" class="header-nav-mobile__item">Contact Us</router-link>
                     </div>
 
-                    <div class="socials">
-                        <a href="#" class="socials__link">
-                            <img src="/public/img/socials/facebook.svg" alt="facebook">
-                        </a>
-                        <a href="#" class="socials__link">
-                            <img src="/public/img/socials/instagram.svg" alt="instagram">
-                        </a>
-                        <a href="#" class="socials__link">
-                            <img src="/public/img/socials/twitter.svg" alt="twitter">
-                        </a>
-                    </div>
+                   <social-links/>
                 </div>
 
             </div>
 
             <div class="header-right">
-                <div class="socials">
-                    <a href="https://www.facebook.com/betterself.today/" target="_blank" class="socials__link">
-                        <img src="/public/img/socials/facebook.svg" alt="facebook">
-                    </a>
-                    <a href="https://www.instagram.com/betterself.today/" target="_blank" class="socials__link">
-                        <img src="/public/img/socials/instagram.svg" alt="instagram">
-                    </a>
-                    <a href="https://twitter.com/I83423721" target="_blank" class="socials__link">
-                        <img src="/public/img/socials/twitter.svg" alt="twitter">
-                    </a>
-                </div>
+                <social-links/>
                 <custom-btn
                     :text="'Subscribe'"
                     :btnType="'gradient'"
@@ -66,11 +48,13 @@
 <script>
     import Logo from '../../../shared/components/Logo.vue'
     import CustomBtn from '../../../shared/components/Custom-btn.vue'
+    import SocialLinks from '../../../shared/components/Social-links.vue'
 
     export default {
         components: {
             Logo,
-            CustomBtn
+            CustomBtn,
+            SocialLinks
         },
         data() {
           return {
@@ -98,6 +82,10 @@
 @import "../../../scss/mixins";
 
     .header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
         height: $header-height;
         background-color: $bcg_violet;
 
@@ -128,6 +116,14 @@
                 top: 0;
                 left: 0;
                 padding: 20px 0;
+
+                .close{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    color: white;
+                    font-size: 24px;
+                }
 
                 .links{
                     display: flex;
