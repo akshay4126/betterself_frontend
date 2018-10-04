@@ -34,7 +34,8 @@
 
             <div v-if="isSend" class="done">
                 Done
-                <img src="/public/img/check.svg" alt="checkmark">
+                <img src="/public/img/check.svg" alt="checkmark" v-if="theme === 'dark'">
+                <img src="/public/img/check_blue.svg" alt="checkmark" v-else>
             </div>
 
         </div>
@@ -101,10 +102,11 @@
 @import "../../scss/mixins";
 $lightBcg: rgba(65, 25, 102, 0.37);
 $lightBcgFocus: rgba(65, 25, 102, 0.17);
-$errorColor: #c835a9;
+$errorColor: #ff0000;
 
     .subscribe{
-        padding: 15px 24px;
+        padding: 0 24px;
+        height: 48px;
         background: $white;
         border-radius: 24px;
         display: flex;
@@ -158,28 +160,32 @@ $errorColor: #c835a9;
             }
 
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: rgba(39, 12, 72, 0.5);
+                color: rgba(39, 12, 72, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
             }
             ::-moz-placeholder { /* Firefox 19+ */
-                color: rgba(39, 12, 72, 0.5);
+                color: rgba(39, 12, 72, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
             }
             :-ms-input-placeholder { /* IE 10+ */
-                color: rgba(39, 12, 72, 0.5);
+                color: rgba(39, 12, 72, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
             }
             :-moz-placeholder { /* Firefox 18- */
-                color: rgba(39, 12, 72, 0.5);
+                color: rgba(39, 12, 72, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
+            }
+
+            .done{
+                color: $text_blue;
             }
         }
 
@@ -200,25 +206,25 @@ $errorColor: #c835a9;
             }
 
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
             }
             ::-moz-placeholder { /* Firefox 19+ */
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
             }
             :-ms-input-placeholder { /* IE 10+ */
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
             }
             :-moz-placeholder { /* Firefox 18- */
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.8);
                 font-weight: 600;
                 font-size: 14px;
                 font-family: 'Source Sans Pro', sans-serif;
@@ -229,6 +235,7 @@ $errorColor: #c835a9;
     .done{
         color: $text_green;
         font-size: 14px;
+        font-weight: 700;
 
         img{
             margin-left: 8px;
