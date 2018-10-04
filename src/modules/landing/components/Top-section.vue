@@ -85,7 +85,7 @@
             img{
                 width: 390px;
                 position: relative;
-                z-index: 99;
+                z-index: 8;
                 bottom: 55px;
 
                 @media #{$tablet} {
