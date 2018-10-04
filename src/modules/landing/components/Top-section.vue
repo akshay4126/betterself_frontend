@@ -1,8 +1,8 @@
 <template>
-    <section class="top-section">
+    <section class="top-section" id="home" >
         <div class="inner-wrapper">
 
-            <div class="top-section-left">
+            <div class="top-section-left wow fadeIn" data-wow-delay="0.6s">
                 <img src="/public/img/better-self.png"
                      alt="title"
                      class="top-section-title"
@@ -33,7 +33,7 @@
             </div>
 
             <div class="top-section-right">
-                <img src="/public/img/top-section/phone@2x.png" alt="phone">
+                <img class="wow fadeIn" data-wow-delay="0.6s" src="/public/img/top-section/phone@2x.png" alt="phone">
             </div>
 
         </div>
@@ -71,11 +71,11 @@
         background: $bcg_gradient;
         padding-top: 95px;
         position: relative;
-        overflow: hidden;
 
         @media #{$mobile} {
             min-height: 660px;
             height: 100%;
+            padding-top: 30px;
         }
 
         &-right{
@@ -83,8 +83,9 @@
             width: 50%;
 
             img{
-                width: 450px;
+                width: 390px;
                 position: relative;
+                z-index: 99;
                 bottom: 55px;
 
                 @media #{$tablet} {
@@ -128,7 +129,7 @@
 
             @media #{$mobile} {
                 order:1;
-                max-width: 200px;
+                max-width: 250px;
                 margin: 0 auto;
             }
         }
@@ -174,6 +175,7 @@
 
             @media #{$mobile} {
                 order:4;
+                text-align: center;
             }
         }
     }

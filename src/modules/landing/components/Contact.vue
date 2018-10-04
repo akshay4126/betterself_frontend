@@ -6,23 +6,25 @@
         <form class="contact-form" @submit.prevent="sendForm">
 
             <custom-input
-                class="contact-form-field"
+                class="contact-form-field wow fadeInUp"
                 :placeholder="'Name'"
                 :width="'100%'"
+                :height="'48px'"
                 v-model="form.name"
                 :fieldError="$v.form.name.$invalid && $v.form.name.$dirty"
             />
 
             <custom-input
-                class="contact-form-field"
+                class="contact-form-field wow fadeInUp"
                 :placeholder="'Email'"
                 :width="'100%'"
+                :height="'48px'"
                 v-model="form.email"
                 :fieldError="$v.form.email.$invalid && $v.form.email.$dirty"
             />
 
             <custom-textarea
-                class="contact-form-field"
+                class="contact-form-field wow fadeInUp"
                 :placeholder="'Message'"
                 :width="'100%'"
                 :height="'112px'"
@@ -31,9 +33,11 @@
             />
 
             <custom-btn
+                class="wow fadeInUp"
                 :text="'Send Message'"
                 :btnType="'gradient'"
                 :width="'100%'"
+                :height="'48px'"
                 :showArrow="true"
             />
 

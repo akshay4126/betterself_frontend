@@ -77,7 +77,7 @@
     @import "../../scss/var";
     @import "../../scss/mixins";
 
-    $errorColor: #c835a9;
+    $errorColor: #ff0000;
 
     .input-wrapper{
         display: flex;
@@ -106,6 +106,10 @@
         @include bcg-color-with-opacity($text_blue, 0.05);
         border: none;
 
+        &:focus{
+            @include bcg-color-with-opacity($text_blue, 0.02);
+        }
+
         @media #{$mobile} {
             width: 100% !important;
         }
@@ -121,6 +125,7 @@
 
     .error-field{
         border:2px solid $errorColor !important;
+        color: $errorColor;
     }
 
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

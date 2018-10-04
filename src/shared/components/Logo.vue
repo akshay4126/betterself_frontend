@@ -1,11 +1,21 @@
 <template>
-    <div class="logo" @click="$router.push('/')">
+    <div class="logo">
         <img
+            v-if="$route.name !== 'home'"
             class="desktop-logo"
             src="/public/img/logo.png"
             alt="logo"
             :style="{'height': height, 'width': width}"
+            @click="$router.push('/')"
         >
+        <a href="#home" v-smooth-scroll v-else>
+            <img
+                class="desktop-logo"
+                src="/public/img/logo.png"
+                alt="logo"
+                :style="{'height': height, 'width': width}"
+            >
+        </a>
     </div>
 </template>
 

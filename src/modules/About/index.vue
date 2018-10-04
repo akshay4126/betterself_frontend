@@ -70,6 +70,7 @@
         h1{
             font-size: 40px;
             font-weight: 700;
+            color: $text_blue;
         }
     }
 

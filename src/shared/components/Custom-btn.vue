@@ -62,13 +62,37 @@
 
     .gradient_btn{
         background: $btn_gradient;
-        border-radius: 20px;
+        border-radius: 24px;
         box-shadow: $btn_shadow;
+        transition: 0.2s;
+        position: relative;
+        overflow: hidden;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            background: rgba(255,255,255,0);
+            transition: 0.2s;
+        }
+
+        &:hover{
+
+            &:after{
+                background: rgba(255,255,255,0.15);
+            }
+        }
     }
 
     .simple_btn{
         border: 1px solid $white;
         border-radius: 24px;
+
+        &:hover{
+            font-size: 12px;
+        }
     }
 
 

@@ -4,6 +4,7 @@
         :class="{'subscribe-dark': theme === 'dark',
                  'subscribe-light': theme === 'light',
                  'subscribe-center': center,
+                 'subscribe-focus': focus,
                  'subscribe-error': this.$v.email.$dirty && this.$v.email.$invalid
                 }"
         :style="{'background-color': bcgColor, 'max-width': maxWidth}"
@@ -14,6 +15,8 @@
                ref="email"
                v-model="email"
                :placeholder="placeholder"
+               @focus="focus = true"
+               @blur="focus = false"
                @input="$emit('input', $event.target.value)"
                @keyup.enter="subscribe"
         >
@@ -69,6 +72,7 @@
         },
         data() {
             return {
+                focus: false,
                 isSend: false,
                 email: ''
             }
@@ -96,6 +100,7 @@
 @import "../../scss/var";
 @import "../../scss/mixins";
 $lightBcg: rgba(65, 25, 102, 0.37);
+$lightBcgFocus: rgba(65, 25, 102, 0.17);
 $errorColor: #c835a9;
 
     .subscribe{
@@ -148,6 +153,10 @@ $errorColor: #c835a9;
                 color: $text_blue;
             }
 
+            &.subscribe-focus{
+                @include bcg-color-with-opacity($lightBcgFocus, 0.02);
+            }
+
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 color: rgba(39, 12, 72, 0.5);
                 font-weight: 600;
@@ -184,6 +193,10 @@ $errorColor: #c835a9;
 
             button{
                 color: $white;
+            }
+
+            &.subscribe-focus{
+                background-color: rgba(65, 25, 102, 0.37) !important;
             }
 
             ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

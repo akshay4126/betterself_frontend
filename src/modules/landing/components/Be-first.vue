@@ -3,7 +3,7 @@
 
         <img class="cloud" src="/public/img/cloud.svg" alt="cloud">
 
-        <be-first-form/>
+        <be-first-form class="wow fadeInUp"/>
 
     </section>
 </template>

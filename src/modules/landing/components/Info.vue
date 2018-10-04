@@ -3,7 +3,7 @@
 
         <img class="ghost" src="/public/img/ghost.svg" alt="ghost">
 
-        <div class="info-block">
+        <div class="info-block wow fadeInUp">
             <img src="/public/img/info/icon_1.svg" alt="icon">
             <div>
                 <h4 class="info-block-title">{{feateure1Header}}</h4>
@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="info-block">
+        <div class="info-block wow fadeInUp">
             <img src="/public/img/info/icon_2.svg" alt="icon">
             <div>
                 <h4 class="info-block-title">{{feateure2Header}}</h4>
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="info-block">
+        <div class="info-block wow fadeInUp">
             <img src="/public/img/info/icon_3.svg" alt="icon">
             <div>
                 <h4 class="info-block-title">{{feateure3Header}}</h4>

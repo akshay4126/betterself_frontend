@@ -46,7 +46,7 @@
 <style lang="scss" scoped>
   @import "../../scss/var";
   @import "../../scss/mixins";
-  $errorColor: #c835a9;
+  $errorColor: #ff0000;
 
   .textarea-wrapper{
     position: relative;
@@ -86,17 +86,18 @@
     font-size: 14px;
     @include bcg-color-with-opacity($text_blue, 0.05);
     border: none;
-
-    &:focus{
-
-    }
     resize: none;
     outline: none;
     padding: 16px;
+
+    &:focus{
+        @include bcg-color-with-opacity($text_blue, 0.02);
+    }
   }
 
   .error-field{
     border:2px solid $errorColor !important;
+    color: $errorColor;
   }
 
 </style>

@@ -4,13 +4,13 @@
 
         <div class="inner-wrapper">
 
-            <h3 class="about-title">{{aboutHeader}}</h3>
+            <h3 class="about-title wow fadeInUp">{{aboutHeader}}</h3>
 
-            <p class="about-subtitle">{{aboutSubHeader}}</p>
+            <p class="about-subtitle wow fadeInUp">{{aboutSubHeader}}</p>
 
-            <p class="about-text">{{aboutDesc}}</p>
+            <p class="about-text wow fadeInUp">{{aboutDesc}}</p>
             <custom-btn
-                class="about-btn"
+                class="about-btn wow fadeInUp"
                 :btnType="'simple'"
                 :text="'Learn More'"
                 :width="'140px'"
@@ -103,8 +103,7 @@
         }
 
         &-btn{
-            margin-left: 50%;
-            transform: translateX(-50%);
+            margin-left: calc(50% - 70px);
             display: flex;
             justify-content: center;
         }

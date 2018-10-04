@@ -2,25 +2,34 @@
     <header class="header">
         <div class="inner-wrapper">
 
-            <div class="header-left">
+            <div class="header-left wow fadeInLeft">
                 <logo/>
 
-                <div class="header-nav">
-                    <router-link :to="{ name: 'home', hash: '#about' }"  class="header-nav__item">About</router-link>
+                <div class="header-nav" v-if="$route.name === 'home'">
+                    <a href="#vision" class="header-nav__item" v-smooth-scroll>Vision</a>
+                    <a href="#about" class="header-nav__item" v-smooth-scroll>About</a>
+                    <a href="#info" class="header-nav__item" v-smooth-scroll>Features</a>
+                    <a href="#contact" class="header-nav__item" v-smooth-scroll>Contact Us</a>
+                </div>
+
+                <div class="header-nav" v-else>
                     <router-link :to="{ name: 'home', hash: '#vision'}" class="header-nav__item">Vision</router-link>
+                    <router-link :to="{ name: 'home', hash: '#about' }"  class="header-nav__item">About</router-link>
                     <router-link :to="{ name: 'home', hash: '#info'}" class="header-nav__item">Features</router-link>
                     <router-link :to="{ name: 'home', hash: '#contact'}" class="header-nav__item">Contact Us</router-link>
                 </div>
 
                 <div class="header-nav-mobile" v-if="showMobileMenu">
 
-                    <div class="close" @click="closeMobileMenu">x</div>
+                    <div class="close" @click="closeMobileMenu">
+                        <img src="/public/img/close.svg" alt="close">
+                    </div>
 
                     <router-link to="/" class="logo-link"><img @click="closeMobileMenu" src="/public/img/logo.png" alt="logo"></router-link>
 
                     <div class="links" @click="closeMobileMenu">
-                        <router-link :to="{ name: 'home', hash: '#about' }" class="header-nav-mobile__item">About</router-link>
                         <router-link :to="{ name: 'home', hash: '#vision' }" class="header-nav-mobile__item">Vision</router-link>
+                        <router-link :to="{ name: 'home', hash: '#about' }" class="header-nav-mobile__item">About</router-link>
                         <router-link :to="{ name: 'home', hash: '#info' }" class="header-nav-mobile__item">Features</router-link>
                         <router-link :to="{ name: 'home', hash: '#contact' }" class="header-nav-mobile__item">Contact Us</router-link>
                     </div>
@@ -30,7 +39,7 @@
 
             </div>
 
-            <div class="header-right">
+            <div class="header-right wow fadeInRight">
                 <social-links/>
                 <custom-btn
                     :text="'Subscribe'"
@@ -119,10 +128,15 @@
 
                 .close{
                     position: absolute;
-                    top: 20px;
+                    top: 33px;
                     right: 20px;
                     color: white;
                     font-size: 24px;
+
+                    img{
+                        width: 12px;
+                        height: 12px;
+                    }
                 }
 
                 .links{

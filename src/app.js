@@ -13,10 +13,11 @@ Vue.use(Vuelidate);
 import Meta from 'vue-meta'
 Vue.use(Meta)
 
-if (process.browser) {
-    const vueSmoothScroll = require('vue2-smooth-scroll')
-    Vue.use(vueSmoothScroll)
-}
+import vueSmoothScroll from 'vue-smooth-scroll'
+Vue.use(vueSmoothScroll)
+
+import {SimpleSVG} from 'vue-simple-svg'
+Vue.component('simple-svg', SimpleSVG)
 
 
 

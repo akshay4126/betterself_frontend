@@ -1,9 +1,9 @@
 <template>
-    <section class="vision" id="vision">
+    <section class="vision" id="vision" >
         <img class="star" src="/public/img/star.svg" alt="star">
-        <div class="inner-wrapper">
+        <div class="inner-wrapper" >
 
-            <div class="vision-left">
+            <div class="vision-left wow fadeIn" data-wow-delay="0.6s">
                 <h3 class="vision-title">
                     {{visionHeader}}
                 </h3>
@@ -14,7 +14,7 @@
             </div>
 
             <div class="vision-right">
-                <img src="/public/img/vision/cloud.svg" alt="cloud">
+                <img src="/public/img/vision/cloud.svg" class="wow fadeInUp" data-wow-delay="0.6s" alt="cloud">
             </div>
 
         </div>
@@ -46,7 +46,7 @@
     .vision{
         min-height: 777px;
         padding: 64px 0 112px 0;
-        background: $bcg_gradient;
+        background: #e8d7f7;
         position: relative;
 
         .inner-wrapper{
