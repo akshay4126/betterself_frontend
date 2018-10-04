@@ -49,6 +49,13 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+
+            @media #{$mobile} {
+                position: relative;
+                left: 0;
+            }
 
             img:first-of-type{
                 width: 32px;
