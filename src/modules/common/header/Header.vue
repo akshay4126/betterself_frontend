@@ -2,7 +2,7 @@
     <header class="header">
         <div class="inner-wrapper">
 
-            <div class="header-left wow fadeInLeft">
+            <div class="header-left">
                 <logo/>
 
                 <div class="header-nav" v-if="$route.name === 'home'">
@@ -39,7 +39,7 @@
 
             </div>
 
-            <div class="header-right wow fadeInRight">
+            <div class="header-right">
                 <social-links/>
                 <custom-btn
                     :text="'Subscribe'"

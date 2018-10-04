@@ -46,9 +46,9 @@
         }
 
         &-center{
-            cursor: pointer;
-            display: flex;
-            align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
 
             img:first-of-type{
                 width: 32px;

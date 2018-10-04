@@ -56,7 +56,7 @@
             position: relative;
 
             @media #{$mobile} {
-                flex-direction: column-reverse;
+                flex-direction: column;
             }
         }
 
@@ -74,6 +74,7 @@
 
             @media #{$mobile} {
                 width: 100%;
+                margin-top: 40px;
             }
 
             img{
