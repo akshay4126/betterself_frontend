@@ -5,14 +5,19 @@
         :style="{'width': width, 'height': height}"
         @click="$emit('click')"
     >
-        {{text}}
-        <img v-if="showArrow" class="btn-image" src="/public/img/arrow.svg" alt="arrow">
+        <span v-if="!isSubmit">{{text}}</span>
+        <img v-if="showArrow && !isSubmit" class="btn-image" src="/public/img/arrow.svg" alt="arrow">
+        <p v-if="isSubmit">Done <img src="/public/img/check_white.svg" alt="check"></p>
     </button>
 </template>
 
 <script>
     export default {
         props: {
+            isSubmit: {
+                type: Boolean,
+                default: false
+            },
             btnType: {
                 type: String,
                 validator: value => {return value === 'simple' || value === 'gradient'},
@@ -56,6 +61,15 @@
         &-image{
             width: 20px;
             margin-left: 8px;
+        }
+
+        p{
+            width: 100%;
+            text-align: center;
+
+            img{
+                margin-left: 6px;
+            }
         }
     }
 

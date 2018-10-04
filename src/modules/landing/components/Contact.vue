@@ -34,7 +34,8 @@
 
             <custom-btn
                 class="wow fadeInUp"
-                :text="'Send Message'"
+                :text="btnText"
+                :isSubmit="isSubmit"
                 :btnType="'gradient'"
                 :width="'100%'"
                 :height="'48px'"
@@ -61,6 +62,8 @@
         },
         data() {
             return {
+                isSubmit: false,
+                btnText: 'Send Message',
                 form: {
                     name: '',
                     email: '',
@@ -82,6 +85,7 @@
                 if (!this.$v.form.$invalid) {
                     dataService.sendForm(this.form).then(() => {
                         this.clearForm();
+                        this.isSubmit = true;
                     }, err => {
                         console.log(err)
                     })
