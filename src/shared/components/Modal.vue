@@ -55,7 +55,7 @@
         @media #{$mobile} {
             max-width: 100%;
             height: 300px !important;
-            top: 20vh !important;
+            top: 12vh !important;
         }
     }
 
