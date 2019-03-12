@@ -1,4 +1,4 @@
-const apiUrl = 'https://develop.betterself.today/api/';
+const apiUrl = 'https://betterself.today/api/';
 
 export {
   apiUrl

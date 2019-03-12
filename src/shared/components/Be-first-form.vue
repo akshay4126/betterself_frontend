@@ -36,7 +36,7 @@
         }
 
         img:last-of-type{
-            width: 196px;
+            width: 203px;
             margin-bottom: 40px;
         }
 

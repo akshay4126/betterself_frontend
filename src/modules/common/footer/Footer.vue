@@ -8,8 +8,7 @@
 
 
             <div class="footer-center" @click="$router.push('/')">
-                <img src="/public/img/logo.png" alt="logo">
-                <img src="/public/img/better-self.svg" alt="better-self">
+                <img src="/public/img/better-self.png" alt="better-self">
             </div>
 
 
@@ -57,12 +56,9 @@
                 left: 0;
             }
 
-            img:first-of-type{
-                width: 32px;
-            }
-            img:last-of-type{
-                width: 98px;
-                margin-left: 8px;
+
+            img{
+                width: 136px;
             }
         }
     }

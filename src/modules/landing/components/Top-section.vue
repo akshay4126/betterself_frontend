@@ -125,7 +125,7 @@
         }
 
         &-title{
-            max-width: 390px;
+            max-width: 460px;
 
             @media #{$mobile} {
                 order:1;
