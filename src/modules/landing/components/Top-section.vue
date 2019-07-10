@@ -9,19 +9,6 @@
                 >
                 <h1 class="top-section-subtitle">{{firstScreenSubheader}}</h1>
 
-                <div class="top-section-buttons">
-                    <img
-                        @click="$modal.show('form-modal')"
-                        src="/public/img/Apple.svg"
-                        alt="apple-store"
-                    >
-                    <img
-                        @click="$modal.show('form-modal')"
-                        src="/public/img/Google.svg"
-                        alt="google-play"
-                    >
-                </div>
-
                 <p class="top-section-text">{{firstScreenDesription}}</p>
 
                 <subscribe
@@ -109,6 +96,7 @@
             display: flex;
             flex-direction: column;
             width: 50%;
+            margin-top: 50px;
 
             @media #{$mobile} {
                 width: 100%;
@@ -160,6 +148,7 @@
 
         &-subtitle{
             margin: 24px 0;
+            margin-bottom: 0;
             @include font-source-sans(24px, $text_blue, 700, 1.38);
 
             @media #{$mobile} {
